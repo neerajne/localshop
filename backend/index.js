@@ -1,0 +1,24 @@
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const path = require("path");
+const connectDB = require("./db/dbConnection");
+require("dotenv").config();
+const shopkeeperRoutes = require("./routes/shopkeeperRoute");
+const shopRoutes = require("./routes/shopRoute");
+const productRoutes = require("./routes/productRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const userRoutes = require("./routes/userRoutes");
+app.use(cors());
+app.use(express.json());
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+const port = process.env.PORT;
+connectDB();
+app.use("/shopOwner", shopkeeperRoutes);
+app.use("/shop", shopRoutes);
+app.use("/product", productRoutes);
+app.use("/orders", orderRoutes);
+app.use("/user", userRoutes);
+app.listen(port, () => {
+  console.log(`app is listening to port ${port}`);
+});

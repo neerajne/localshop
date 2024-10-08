@@ -1,0 +1,17 @@
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Show the dropdown menu on hover */
+}
+
+.dropdown-menu {
+    display: none;
+    /* Hide the dropdown menu by default */
+    position: absolute;
+    /* Position it absolutely */
+    background-color: white;
+    /* Background color for dropdown */
+    border: 1px solid #ccc;
+    /* Optional border */
+    z-index: 1000;
+    /* Ensure it appears on top */
+}

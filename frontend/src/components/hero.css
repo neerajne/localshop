@@ -1,0 +1,27 @@
+.shops {
+    height: 150px;
+    width: 155px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f5f5f5; /* Light background color */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shops img {
+    height: 100%; /* Adjust image size */
+    width: 100%;
+    object-fit: cover; /* Ensures image fits properly */
+    border-radius: 50%;
+}
+
+.shops:hover {
+    border: 5px solid orange;
+    background-color: #fff; /* Optional background color change on hover */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: scale(1.1); /* Slightly increase the size */
+}
